@@ -1,5 +1,7 @@
 package builder;
 
+import builder.car.Car;
+import builder.car.CarBuilder;
 import builder.house.House;
 import builder.house.HouseBuilder;
 
@@ -22,6 +24,8 @@ public class Main {
                 .build();
 
         System.out.println(luxuryHouse);
+        Car audi = new CarBuilder().setConvertible(true).setHasAC(true).setSeats(4).setDoors(3).build();
+        System.out.println(audi.toString());
 	}
 
 }
